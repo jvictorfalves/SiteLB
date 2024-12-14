@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bella - Loja de Makes e Cosméticos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho do Site -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">La Bella</h1>
+            <nav class="navbar">
+                <a href="#sobre">SOBRE NÓS</a>
+                <a href="#produtos">PRODUTOS</a>
+                <a href="#contato">CONTATO</a>
+                <a href="#duvidas">FAQ</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/labellamakes_oficial/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/+5564996145941" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <div class="icones">
+                    <!-- Ícone de usuário para entrar -->
+                    <a href="#"><i class="fas fa-user"></i></a>
+                    <!-- Ícone de carrinho com funcionalidade de abrir carrinho -->
+                    <a href="#" onclick="toggleCarrinho()"><i class="fas fa-shopping-cart"></i></a>
+                    <!-- Carrinho suspenso -->
+                    <div id="carrinho" class="carrinho-suspenso">
+                        <h3>Seu Carrinho</h3>
+                        <div id="itens-carrinho"></div>
+                        <p id="total">Total: R$ 0,00</p>
+                        <button onclick="finalizarCompra()">Finalizar Compra</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <!-- Seção de Produtos -->
+        <section id="produtos" class="mais-vendidos">
+            <div class="header">
+                <h2>Produtos</h2>
+            </div>
+            <div class="produtos">
+                <div class="produto">
+                    <img src="img/fotoloja1.jpg" alt="Máscara de cilios">
+                    <h3>MÁSCARA DE CÍLIOS TRÓPICO - RUBY ROSE</h3>
+                    <p class="preco">R$ 15,00</p>
+                    <button onclick="adicionarAoCarrinho('Máscara de cilios', 15.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="img/fotoloja10.jpg" alt="KIT PINCEIS">
+                    <h3>KIT PINCÉIS ECO CABO MACRILAN</h3>
+                    <p class="preco">R$ 114,90</p>
+                    <button onclick="adicionarAoCarrinho('KIT PINCEIS', 114.90)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="img/fotoloja11.jpg" alt="PÓ SOLTO">
+                    <h3>PÓ SOLTO - PHÁLEBEAUTY</h3>
+                    <p class="preco">R$ 15,00</p>
+                    <button onclick="adicionarAoCarrinho('PÓ SOLTO', 15.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="img/fotoloja13.jpg" alt="PALETA SOMBRAS">
+                    <h3>PALETA DE SOMBRAS - IGOODCO</h3>
+                    <p class="preco">R$ 150,00</p>
+                    <button onclick="adicionarAoCarrinho('PALETA De SOMBRAS', 150.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="img/fotoloja2.jpg" alt="Batom Líquido">
+                    <h3>BATOM LÍQUIDO MATTE 24 HORAS - MAX LOVE</h3>
+                    <p class="preco">R$ 10,00</p>
+                    <button onclick="adicionarAoCarrinho('batom', 10.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="img/fotoloja3.jpg" alt="MÁSCARA cilios">
+                    <h3>MÁSCARA DE CÍLIOS 2 LOOKS - TANGO</h3>
+                    <p class="preco">R$ 15,00</p>
+                    <button onclick="adicionarAoCarrinho('MÁSCARA de cilios', 15.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="img/fotoloja4.jpg" alt="BLUSH">
+                    <h3>BLUSH STICK - AMOR ANJO</h3>
+                    <p class="preco">R$ 10,00</p>
+                    <button onclick="adicionarAoCarrinho('BLUSH', 10.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="img/fotoloja5.jpg" alt="BLUSH">
+                    <h3>BLUSH STICK - HUDABEAUTY</h3>
+                    <p class="preco">R$ 10,00</p>
+                    <button onclick="adicionarAoCarrinho('BLUSH', 10.00)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="img/fotoloja6.jpg" alt="KIT OHMY">
+                    <h3>KIT MODELADOR DE CACHOS - OHMY</h3>
+                    <p class="preco">R$ 25,90</p>
+                    <button onclick="adicionarAoCarrinho('KIT OHMY', 25.90)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="img/fotoloja7.jpg" alt="KIT OHMY">
+                    <h3>SHAMPOO / CONDICIONADOR</h3>
+                    <p class="preco">R$ 25,90</p>
+                    <button onclick="adicionarAoCarrinho('KIT OHMY', 25.90)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="img/WELLA.jpg" alt="WELLA">
+                    <h3>ÓLEO CAPILAR NUTRITIVO - WELLA</h3>
+                    <p class="preco">R$ 149,90</p>
+                    <button onclick="adicionarAoCarrinho('WELLA', 149.90)">Comprar</button>
+                </div>
+                <div class="produto">
+                    <img src="img/PÓ BANANA.jpg" alt="PÓ">
+                    <h3>PÓ BANANA - LADY BEAUTY</h3>
+                    <p class="preco">R$ 10,00</p>
+                    <button onclick="adicionarAoCarrinho('PÓ BANANA', 10.00)">Comprar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Loja Física -->
+        <section class="loja-fisica">
+            <div class="loja-container">
+                <img src="img/frenteprinc.jpg" alt="Foto da loja" class="loja-img">
+                <div class="loja-info">
+                    <h2>Venha conhecer nossa <span>LOJA FÍSICA</span></h2>
+                    <p>Local: Rua Marechal Floriano Peixoto Número : 22 <br> Centro , Orizona Goiás</p>
+                </div>
+                <img src="img/FOTOLOJAMK.jpg" alt="Foto da loja" class="loja-img">
+                <img src="img/lojapt1.jpg" alt="Foto da loja" class="loja-img">
+                <img src="img/lojapt2.jpg" alt="Foto da loja" class="loja-img">
+            </div>
+        </section>
+
+        <!-- Seção de Dúvidas -->
+        <section class="duvidas" id="duvidas">
+            <h2>Dúvidas? Vem que a gente te ajuda:</h2>
+            <div class="duvidas-opcoes">
+                <div class="duvida-item">
+                    <i class="fas fa-shipping-fast" style="color: #d4af37;"></i>
+                    <p>Rastrear meu pedido</p>
+                </div>
+                <div class="duvida-item">
+                    <i class="fas fa-clock" style="color: #d4af37;"></i>
+                    <p>Prazo de entrega</p>
+                </div>
+                <div class="duvida-item">
+                    <i class="fas fa-money-bill-wave" style="color: #d4af37;"></i>
+                    <p>Valor do frete</p>
+                </div>
+                <div class="duvida-item">
+                    <i class="fas fa-handshake" style="color: #d4af37;"></i>
+                    <p>Parcerias conosco</p>
+                </div>
+                <div class="duvida-item">
+                    <i class="fas fa-shopping-cart" style="color: #d4af37;"></i>
+                    <p>Como comprar?</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="sobre-nos-content" id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>
+                Bem-vindo à La Bella! Desde 2018, somos a loja de maquiagem de confiança em Orizona, trazendo
+                produtos de alta qualidade e acessíveis para nossos clientes. Nossa missão é oferecer
+                beleza e autoestima ao alcance de todos.
+            </p>
+            <p>
+                Visite-nos e confira nossa ampla seleção de cosméticos, com produtos para todas as ocasiões.
+                Com promoções exclusivas e um atendimento de excelência, buscamos sempre oferecer uma experiência
+                inesquecível aos nossos clientes.
+            </p>
+        </div>
+        <p class="rodape-texto">© 2024 La Bella. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

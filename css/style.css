@@ -1,0 +1,408 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 1rem;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #333;
+    padding: 1rem 2rem;
+    color: #fff;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Logo da loja */
+.logo {
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+/* Barra de navegação */
+.navbar {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #d4af37;
+}
+
+/* Ícones de redes sociais */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #d4af37;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+     gap: 1rem;
+}
+
+.social-icons a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+.icones {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+/* Estilo dos Ícones */
+.icones a {
+    color: #d4af37;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    
+}
+
+.icones a:hover {
+    color: #f5f4f2;
+}
+.carrinho-suspenso {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 250px;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f5f5f5; /* Fundo cinza claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.carrinho-suspenso h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #222; /* Texto escuro para contraste */
+}
+
+#itens-carrinho {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+#total {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #222; /* Texto mais escuro */
+}
+
+.carrinho-suspenso button {
+    padding: 8px 12px;
+    background-color: #d4af37; /* Fundo dourado */
+    color: #333; /* Texto escuro */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.carrinho-suspenso button:hover {
+    background-color: #b8992d; /* Tom mais escuro no hover */
+}
+
+/* Banner */
+.banner-texto h2 {
+    color: #333;
+    font-size: 2rem;
+}
+
+/* Seção Mais Vendidos */
+.mais-vendidos {
+    padding: 2rem;
+    text-align: center;
+    background-color: white;
+}
+
+.mais-vendidos .header {
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.mais-vendidos h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.produtos {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 200px;
+    height: 320px; /* Aumente a altura do card se precisar de mais espaço */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.produto h3 {
+    font-size: 1rem;
+    color: #0a0a0a;
+    font-weight: bold;
+    margin: 0.5rem 0 0.2rem;
+    text-align: center;
+}
+
+.produto .preco {
+    font-size: 1rem;
+    color: red; /* cor de destaque para o preço */
+    font-weight: bold;
+    margin: 0.2rem 0 1rem; /* espaçamento superior e inferior */
+    text-align: center;
+}
+
+.produto button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: auto;
+}
+
+
+.produto button:hover {
+    background-color: #d4af37;
+}
+
+/* Seção Loja Física */
+.loja-fisica {
+    background-color: white;
+    padding: 3rem;
+    text-align: center;
+}
+
+.loja-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.loja-img {
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loja-info {
+    text-align: left;
+    max-width: 300px;
+}
+
+.loja-info h2 {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.loja-info h2 span {
+    color: #d4af37;
+}
+
+.loja-info p {
+    color: #000000;
+    font-size: 1rem;
+}
+
+.duvidas {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #faf3e0;
+}
+
+.duvidas h2 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.duvidas-opcoes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.duvida-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.duvida-item i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.duvida-item p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.duvida-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Contato e Redes Sociais */
+.contato {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1.25rem;
+    margin: 2rem auto;
+    max-width: 90vw;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contato h2 {
+    color: #d4af37;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5625rem;
+}
+
+.social-links a {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #f7f6f1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #d4af37;
+    color: #333;
+    transform: translateY(-2px);
+}
+
+/* Rodapé com Sobre Nós */
+.rodape {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+}
+
+.rodape .sobre-nos-content {
+    background-color: transparent;
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.rodape .sobre-nos-content h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.rodape .sobre-nos-content p {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0.25rem 0;
+    line-height: 1.5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons {
+        margin-top: 1rem;
+    }
+}
